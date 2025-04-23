@@ -1,0 +1,43 @@
+.about {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  .boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .box {
+    background-color: #add8e6;  /* Light Blue */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+  }
+  
+  .box h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .box p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
