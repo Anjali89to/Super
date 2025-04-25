@@ -1,43 +1,103 @@
 .about {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows wrapping for mobile view */
+}
+
+.box {
+  background-color: #3498db;  /* Normal Blue */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px; /* Adds some space below each box */
+}
+
+.box:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.box h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: white; /* Ensures heading is white */
+}
+
+.box p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white; /* Ensures paragraph text is white */
+}
+
+/* Media Queries for Mobile and Tablet */
+@media (max-width: 768px) {
   .about h2 {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 28px; /* Reduces font size for smaller screens */
   }
-  
+
   .about p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 40px;
+    font-size: 16px; /* Reduces font size for smaller screens */
   }
-  
+
   .boxes {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    flex-direction: column; /* Stacks the boxes vertically on small screens */
+    align-items: center; /* Centers the boxes */
   }
-  
+
   .box {
-    background-color: #add8e6;  /* Light Blue */
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    text-align: center;
+    width: 100%; /* Makes boxes take full width */
+    margin: 10px 0; /* Adds space between boxes */
   }
-  
+
   .box h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 20px; /* Reduces font size of heading */
   }
-  
+
   .box p {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px; /* Reduces font size of paragraph */
   }
-  
+}
+
+@media (max-width: 480px) {
+  .about h2 {
+    font-size: 24px; /* Further reduces font size for very small screens */
+  }
+
+  .about p {
+    font-size: 14px; /* Further reduces font size for very small screens */
+  }
+
+  .box {
+    padding: 15px; /* Adjusts padding for smaller screens */
+  }
+
+  .box h3 {
+    font-size: 18px; /* Further reduces font size of heading */
+  }
+
+  .box p {
+    font-size: 12px; /* Further reduces font size of paragraph */
+  }
+}

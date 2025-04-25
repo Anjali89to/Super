@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import './CounselingForm.css'; // for form styling
+import './CounselingForm.css'; // For form styling
 
 function Navbar() {
   const [showForm, setShowForm] = useState(false);
+  const [menuActive, setMenuActive] = useState(false); // Track menu state for mobile
 
   const toggleForm = () => {
     setShowForm(!showForm);
+  };
+
+  const toggleMenu = () => {
+    setMenuActive(!menuActive);
   };
 
   return (
@@ -15,14 +20,20 @@ function Navbar() {
         <div className="left-section">
           <h2>ThinkAcademies</h2>
         </div>
-        <ul className="nav-links">
+        <ul className={`nav-links ${menuActive ? 'active' : ''}`}>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#testimonial">Testimonial</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
 
-        {/* Open form on click */}
+        {/* Hamburger Icon */}
+        <div className="hamburger" onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        {/* Free Counseling Button */}
         <button className="free-counseling-btn" onClick={toggleForm}>
           Free Counseling
         </button>

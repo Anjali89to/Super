@@ -1,64 +1,117 @@
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px 20px;
-    background-color: #f0f0f0; /* Light background color */
-  }
-  
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+}
+
+.hero-image {
+  flex: 1;
+  height: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background-color: #f5faff;
+  font-style: italic; /* Make all text italic */
+  font-family: 'Georgia', 'Times New Roman', serif; /* Elegant serif font */
+  color: #222;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  color: #003366;
+  margin-bottom: 15px;
+  font-style: normal; /* Keep heading normal */
+  font-weight: bold;
+}
+
+.intro-text,
+.extra-text {
+  font-size: 18px;
+  color: #444;
+  margin: 8px 0;
+  line-height: 1.6;
+  font-style: italic; /* Apply italic specifically too */
+}
+
+.cta-button {
+  margin-top: 20px;
+}
+
+.cta-button button {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Mobile-Friendly Styles */
+@media (max-width: 768px) {
   .hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
-  
+
   .hero-text {
-    flex: 1;
-    padding: 80px 20px;  /* Increased padding-top to push text down */
-    text-align: left;
-  }
-  
-  .hero-text h1 {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .hero-text .intro-text {
-    font-size: 20px;
-    color: #555;
-    margin-bottom: 30px;
-  }
-  
-  .cta-button {
-    margin-top: 30px;
-  }
-  
-  .cta-button button {
-    padding: 12px 30px;
-    font-size: 18px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button button:hover {
-    background-color: #0056b3;
-  }
-  
-  .hero-image {
-    flex: 1;
     padding: 20px;
   }
-  
-  .hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; /* Optional: for rounded corners on image */
+
+  .hero-text h1 {
+    font-size: 28px; /* Adjust font size on mobile */
   }
-  
+
+  .intro-text,
+  .extra-text {
+    font-size: 16px; /* Slightly smaller text for mobile */
+  }
+
+  .cta-button button {
+    padding: 10px 20px;
+    font-size: 14px; /* Adjust button size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    padding: 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 24px; /* Further reduce font size for smaller screens */
+  }
+
+  .intro-text,
+  .extra-text {
+    font-size: 14px; /* Smaller font for extra readability on small screens */
+  }
+
+  .cta-button button {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+}

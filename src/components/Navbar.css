@@ -1,76 +1,184 @@
+
+
+/* Navbar Styles */
 .navbar {
-    background-color: white; /* White background */
-    color: black; /* Black text color */
-    padding: 20px;
-    font-size: 24px;
-    display: flex;
-    justify-content: space-between; /* Distribute content */
-    align-items: center; /* Vertically center content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
-  }
-  
-  .left-section {
-    display: flex;
-    align-items: center; /* Vertically center "ThinkAcademies" */
-  }
-  
-  .left-section h2 {
-    margin: 0;
-    padding-left: 20px;
-  }
-  
-  .nav-links {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center; /* Center align the links */
-    flex-grow: 1; /* Ensures the links take all available space */
-  }
-  
-  .nav-links li {
-    margin: 0 15px;
-  }
-  
-  .nav-links a {
-    color: black;
-    text-decoration: none;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Navbar Content (Left Section) */
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.left-section h2 {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Free Counseling Button */
+.free-counseling-btn {
+  background-color: #fff;
+  color: #007bff;
+  border: 2px solid #007bff;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 20px;
+}
+
+.free-counseling-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Hamburger Menu (3 Lines) */
+.hamburger {
+  display: none; /* Initially hide it */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px;
     font-size: 18px;
-    transition: color 0.3s ease;
   }
-  
-  .nav-links a:hover {
-    color: #007bff; /* Hover effect on links */
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: white;
+    width: 200px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
   }
-  
-  /* Styling for Free Counseling button */
+
+  .nav-links.active {
+    display: flex; /* Show the menu when active */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger on mobile */
+  }
+
   .free-counseling-btn {
-    background-color: #007bff; /* Blue background */
-    color: white; /* White text */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    margin-left: 20px; /* Add space between button and navbar */
+    font-size: 14px;
   }
-  
-  .free-counseling-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-  }
-  .free-counseling-btn {
-    background-color: #fff;
-    color: #007bff;
-    border: 2px solid #007bff;
-    padding: 10px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .free-counseling-btn:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
+}
+
+/* Hero Section Styling */
+#home {
+  margin-top: 80px; /* Adjust for navbar */
+}
+
+/* Modal Form Styling */
+.counseling-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.counseling-form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}

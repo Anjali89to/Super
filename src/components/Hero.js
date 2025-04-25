@@ -5,17 +5,28 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
+        {/* Text on the left side */}
         <div className="hero-text">
           <h1>Welcome to ThinkAcademies</h1>
           <p className="intro-text">Your path to success starts here.</p>
+          <p className="extra-text">We help students grow with the right skills and guidance.</p>
           <div className="cta-button">
-            <a href="https://forms.gle/LgzVCPchfGKSX5qv9" target="_blank" rel="noopener noreferrer">
+            <a 
+              href="https://forms.gle/LgzVCPchfGKSX5qv9" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               <button>Apply Now</button>
             </a>
           </div>
         </div>
+
+        {/* Image on the right side */}
         <div className="hero-image">
-          <img src="https://www.monetizemore.com/wp-content/uploads/2023/03/program-overview-img.png" alt="Program Overview" />
+          <img 
+            src="https://sydoverseas.com/wp-content/uploads/2020/08/hero-women-accountant.jpg" 
+            alt="Confident woman planning her future" 
+          />
         </div>
       </div>
     </section>
