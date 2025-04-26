@@ -18,7 +18,7 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="left-section">
-          <h2>ThinkAcademies</h2>
+          <h2>Think Academies</h2>
         </div>
         <ul className={`nav-links ${menuActive ? 'active' : ''}`}>
           <li><a href="#home">Home</a></li>

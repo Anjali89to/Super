@@ -7,7 +7,7 @@ function Hero() {
       <div className="hero-content">
         {/* Text on the left side */}
         <div className="hero-text">
-          <h1>Welcome to ThinkAcademies</h1>
+          <h1>Welcome to Think Academies</h1>
           <p className="intro-text">Your path to success starts here.</p>
           <p className="extra-text">We help students grow with the right skills and guidance.</p>
           <div className="cta-button">

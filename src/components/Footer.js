@@ -7,9 +7,9 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
-          <h3>ThinkAcademies</h3>
+          <h3>Think Academies</h3>
           <p>Empowering students for success abroad.</p>
-          <p>We help you find the right opportunities, prepare for global exams, and connect with international programs.</p>
+          <p>We help you find the right opportunities</p>
         </div>
 
         <div className="footer-section">
@@ -41,7 +41,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2025 ThinkAcademies. All rights reserved.</p>
+        <p>&copy; 2025 Think Academies. All rights reserved.</p>
       </div>
     </footer>
   );
